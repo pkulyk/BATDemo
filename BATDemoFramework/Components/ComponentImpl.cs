@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions.Internal;
 using OpenQA.Selenium.Internal;
@@ -34,11 +29,11 @@ namespace BATDemoFramework.Components
 
         bool IWebElement.Displayed => this.element.Displayed;
 
-        IWebElement IWrapsElement.WrappedElement => throw new NotImplementedException();
+        IWebElement IWrapsElement.WrappedElement => ((IWrapsElement)this.element).WrappedElement;
 
-        Point ILocatable.LocationOnScreenOnceScrolledIntoView => throw new NotImplementedException();
+        Point ILocatable.LocationOnScreenOnceScrolledIntoView => ((ILocatable)this.element).LocationOnScreenOnceScrolledIntoView;
 
-        ICoordinates ILocatable.Coordinates => throw new NotImplementedException();
+        ICoordinates ILocatable.Coordinates => ((ILocatable) this.element).Coordinates;
 
         void IWebElement.Clear()
         {
