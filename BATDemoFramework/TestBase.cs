@@ -1,5 +1,4 @@
-﻿using BATDemoFramework.Generators;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace BATDemoFramework
 {
@@ -10,7 +9,7 @@ namespace BATDemoFramework
         public static void Initialize()
         {
             Browser.Initialize();
-            UserGenerator.Initialize();
+            //UserGenerator.Initialize();
         }        
 
         [TestFixtureTearDown]
@@ -22,11 +21,11 @@ namespace BATDemoFramework
         [TearDown]
         public static void TearDown()
         {
-            if(Pages.TopNavigation.IsLoggedIn())
-                Pages.TopNavigation.LogOut();
+            //if(Pages.TopNavigation.IsLoggedIn())
+            //    Pages.TopNavigation.LogOut();
 
-            if(UserGenerator.LastGeneratedUser != null)
-                Browser.Goto("Account/DeleteUsers.cshtml");
+            //if(UserGenerator.LastGeneratedUser != null)
+            //    Browser.Goto("Account/DeleteUsers.cshtml");
         }
     }
 }

@@ -49,21 +49,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Elements\Button.cs" />
+    <Compile Include="Elements\CheckBox.cs" />
+    <Compile Include="Elements\Element.cs" />
+    <Compile Include="Elements\TextBox.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="Generators\EmailAddressGenerator.cs" />
-    <Compile Include="Pages\AboutPage.cs" />
+    <Compile Include="PageObjects\AboutPage.cs" />
+    <Compile Include="PageObjects\BasePage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="Browser.cs" />
-    <Compile Include="Pages\ContactPage.cs" />
-    <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Pages\LoginPage.cs" />
-    <Compile Include="Pages\ManageAccountPage.cs" />
-    <Compile Include="Pages\Pages.cs" />
-    <Compile Include="Generators\UserGenerator.cs" />
-    <Compile Include="Generators\PasswordGenerator.cs" />
+    <Compile Include="PageObjects\Pages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pages\RegisterPage.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="Pages\TopNavigationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -74,6 +71,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Label="DownloadChromeDriverBuildTask">
     <CoreBuildDependsOn>DownloadChromeDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
