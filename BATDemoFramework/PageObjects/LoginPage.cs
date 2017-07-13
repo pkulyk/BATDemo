@@ -14,12 +14,14 @@ namespace BATDemoFramework.PageObjects
         private TextBox passwordTextField;
         private Button logInButton;
 
-        public LoginPage(IWebDriver driver) : base(driver)
+        public LoginPage(Browser browser) : base(browser)
         {
             this.emailAddressTextField = new TextBox(Driver, By.Id("email"));
             this.passwordTextField = new TextBox(Driver, By.Id("password"));
             this.logInButton = new Button(Driver, By.CssSelector("input[type='submit']"));
         }
+
+        public Button LoginButton { get { return this.logInButton; } }
 
         public void Login(string email, string password)
         {

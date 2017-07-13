@@ -3,31 +3,31 @@ using OpenQA.Selenium.Chrome;
 
 namespace BATDemoFramework
 {
-    public static class Browser
+    public class Browser
     {
         private static string baseUrl = "http://localhost:12142/";
         private static IWebDriver webDriver = new ChromeDriver();
-        public static void Initialize()
+        public void Initialize()
         {
             Goto("");
         }
 
-        public static string Title
+        public string Title
         {
             get { return webDriver.Title; }
         }
 
-        public static IWebDriver Driver
+        public IWebDriver Driver
         {
             get { return webDriver; }
         }
 
-        public static void Goto(string url)
+        public void Goto(string url)
         {
             webDriver.Url = baseUrl + url;
         }
 
-        public static void Close()
+        public void Close()
         {
             //webDriver.Close();
         }

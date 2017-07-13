@@ -5,21 +5,24 @@ namespace BATDemoFramework
     [TestFixture]
     public class TestBase
     {
+        private Browser browser;
+
         [TestFixtureSetUp]
-        public static void Initialize()
+        public void Initialize()
         {
-            Browser.Initialize();
+            this.browser = new Browser();
+            browser.Initialize();
             //UserGenerator.Initialize();
         }        
 
         [TestFixtureTearDown]
-        public static void TestFixtureTearDown()
+        public void TestFixtureTearDown()
         {
-            Browser.Close();
+            
         }
 
         [TearDown]
-        public static void TearDown()
+        public void TearDown()
         {
             //if(Pages.TopNavigation.IsLoggedIn())
             //    Pages.TopNavigation.LogOut();

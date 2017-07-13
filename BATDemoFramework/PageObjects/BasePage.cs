@@ -11,9 +11,9 @@ namespace BATDemoFramework.PageObjects
     {
         private IWebDriver driver;
 
-        public BasePage(IWebDriver driver)
+        public BasePage(Browser browser)
         {
-            this.driver = driver;
+            this.driver = browser.Driver;
         }
 
         protected IWebDriver Driver { get { return this.driver; } }

@@ -1,4 +1,5 @@
 ﻿using BATDemoFramework;
+using BATDemoFramework.PageObjects;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace BATDemoTests
         [Test]
         public void NewLoginTest()
         {
+
+            Pages.LoginPage.LoginButton.Click();
 
         }
 

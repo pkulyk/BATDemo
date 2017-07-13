@@ -8,7 +8,7 @@ namespace BATDemoFramework.PageObjects
 {
     public static class Pages
     {
-        public static LoginPage LoginPage { get { return new LoginPage(Browser.Driver); } }
+        public static LoginPage LoginPage { get { return new LoginPage(new Browser()); } }
 
     }
 }
