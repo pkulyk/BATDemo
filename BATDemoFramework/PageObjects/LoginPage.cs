@@ -16,9 +16,9 @@ namespace BATDemoFramework.PageObjects
 
         public LoginPage(Browser browser) : base(browser)
         {
-            this.emailAddressTextField = new TextBox(Driver, By.Id("email"));
-            this.passwordTextField = new TextBox(Driver, By.Id("password"));
-            this.logInButton = new Button(Driver, By.CssSelector("input[type='submit']"));
+            this.emailAddressTextField = new TextBox(browser, By.Id("email"));
+            this.passwordTextField = new TextBox(browser, By.Id("password"));
+            this.logInButton = new Button(browser, By.CssSelector("input[type='submit']"));
         }
 
         public Button LoginButton { get { return this.logInButton; } }

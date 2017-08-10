@@ -9,7 +9,7 @@ namespace BATDemoFramework.Elements
 {
     public class Button : Element
     {
-        public Button(IWebDriver driver, By by) : base(driver, by)
+        public Button(Browser browser, By by) : base(browser, by)
         {
         }
 

@@ -9,7 +9,7 @@ namespace BATDemoFramework.Elements
 {
     public class CheckBox : Element
     {
-        public CheckBox(IWebDriver driver, By by) : base(driver, by)
+        public CheckBox(Browser browser, By by) : base(browser, by)
         {
         }
 

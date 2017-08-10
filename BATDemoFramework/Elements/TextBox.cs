@@ -9,7 +9,7 @@ namespace BATDemoFramework.Elements
 {
     public class TextBox : Element
     {
-        public TextBox(IWebDriver driver, By by) : base(driver, by)
+        public TextBox(Browser browser, By by) : base(browser, by)
         {
         }
 
