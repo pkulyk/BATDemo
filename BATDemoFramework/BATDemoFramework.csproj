@@ -61,6 +61,7 @@
     <Compile Include="PageObjects\Pages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase.cs" />
+    <Compile Include="WrappedConditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
